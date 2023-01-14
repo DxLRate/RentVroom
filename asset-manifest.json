@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/RentVroom/static/css/main.3eda8bf5.chunk.css",
+    "main.js": "/RentVroom/static/js/main.61f90737.chunk.js",
+    "main.js.map": "/RentVroom/static/js/main.61f90737.chunk.js.map",
+    "runtime-main.js": "/RentVroom/static/js/runtime-main.8817ba05.js",
+    "runtime-main.js.map": "/RentVroom/static/js/runtime-main.8817ba05.js.map",
+    "static/js/2.3bbab2b8.chunk.js": "/RentVroom/static/js/2.3bbab2b8.chunk.js",
+    "static/js/2.3bbab2b8.chunk.js.map": "/RentVroom/static/js/2.3bbab2b8.chunk.js.map",
+    "index.html": "/RentVroom/index.html",
+    "static/css/main.3eda8bf5.chunk.css.map": "/RentVroom/static/css/main.3eda8bf5.chunk.css.map",
+    "static/js/2.3bbab2b8.chunk.js.LICENSE.txt": "/RentVroom/static/js/2.3bbab2b8.chunk.js.LICENSE.txt",
+    "static/media/bmw-offer.ecfb9ac1.png": "/RentVroom/static/media/bmw-offer.ecfb9ac1.png",
+    "static/media/mercedes-offer.d177a4fe.png": "/RentVroom/static/media/mercedes-offer.d177a4fe.png",
+    "static/media/nissan-offer.6eddc863.png": "/RentVroom/static/media/nissan-offer.6eddc863.png",
+    "static/media/offer-toyota.4b2435e4.png": "/RentVroom/static/media/offer-toyota.4b2435e4.png",
+    "static/media/toyota-offer-2.861de085.png": "/RentVroom/static/media/toyota-offer-2.861de085.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8817ba05.js",
+    "static/js/2.3bbab2b8.chunk.js",
+    "static/css/main.3eda8bf5.chunk.css",
+    "static/js/main.61f90737.chunk.js"
+  ]
+}
