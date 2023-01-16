@@ -11,6 +11,7 @@ const ProductPage = () => {
   const fetchProducts =  () => {
     dispatch(setProducts(carData));
   };
+  console.log(products[1]);
   const Helmet = (props) => {
     document.title = "Rent Car Service - " + props.title;
     return <div className="w-100">{props.children}</div>;
@@ -38,23 +39,30 @@ const ProductPage = () => {
       <section>
         <Container>
           <Row>
-            <Col lg="12">
-              <div className=" d-flex align-items-center gap-3 mb-5">
-                <span className=" d-flex align-items-center gap-2">
-                  <i class="ri-sort-asc"></i> Sort By
-                </span>
+          <br />
+            <Col style={{
+                margin: "10px",
 
-                <select>
-                  <option>Select</option>
-                  <option value="low">Low to High</option>
-                  <option value="high">High to Low</option>
-                </select>
-              </div>
+              }} lg="12">
+              
+              <h2 className="section__title">Car Details</h2>
+              <hr
+              style={{
+                margin: "6px",
+                background: "#000000",
+                height: "2px",
+                
+              }}
+            />
+              <br /><br /><br />
             </Col>
-
-            {carData.map((item) => (
-              <CarItem item={item} key={item.id} />
+            <Col lg="12">
+            
+            {products.map((item) => (
+              <CarItem item={item} key={item.id} num={item.id}/>
             ))}
+            
+            </Col>
           </Row>
         </Container>
       </section>

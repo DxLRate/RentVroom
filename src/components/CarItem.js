@@ -1,47 +1,86 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Col} from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import "../styles/car-item.css";
+import Button from "react-bootstrap/Button";
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import ColorizeIcon from '@mui/icons-material/Colorize';
+import AirlineSeatReclineNormalIcon from '@mui/icons-material/AirlineSeatReclineNormal';
 const CarItem = (props) => {
-    const { id,imgUrl, model, carName, automatic, speed, price} = props.item;
+  const { id, color, capacity, isAvailable, imgUrl, model, carName, automatic, speed, price } = props.item;
+
 
   return (
-    <Col lg="4" md="4" sm="6" className="mb-5">
-      <div className="car__item">
-        <div className="car__img">
+    <div className="car__item">
+      <Row lg="10">
+
+
+        <Col lg="3"><div className="car__img">
           <img src={imgUrl} alt="" className="w-100" />
         </div>
-
-        <div className="car__item-content mt-4">
+        </Col>
+        <Col lg="3"><br />
           <h4 className="section__title text-center">{carName}</h4>
+          <br />
+          <div
+            className=" d-flex align-items-center mt-3"
+            style={{ color: "grey", columnGap: "4rem" }}
+          >
+            <span className=" d-flex align-items-center gap-1 section__description">
+              <i
+                className="ri-roadster-line"
+                style={{ color: "#f9a826" }}
+              ></i>{" "}
+              <ColorizeIcon />
+              {color}
+            </span>
+
+            <span className=" d-flex align-items-center gap-1 section__description">
+              <i
+                className="ri-settings-2-line"
+                style={{ color: "#f9a826" }}
+              ></i>{" "}
+              <AirlineSeatReclineNormalIcon />
+              {capacity}
+            </span>
+
+
+          </div>
+        </Col>
+        <Col lg="2">
+
+          <br />
+          <br />
           <h6 className="rent__price text-center mt-">
-            Rs {price}.00 <span>/ Day</span>
+            Rent per day  :
+
+            <CurrencyRupeeIcon /> {price}
+
+
           </h6>
 
-          <div className="car__item-info d-flex align-items-center justify-content-between mt-3 mb-4">
-            <span className=" d-flex align-items-center gap-1">
-              <i class="ri-car-line"></i> {model}
-            </span>
-            <span className=" d-flex align-items-center gap-1">
-              <i class="ri-settings-2-line"></i> {automatic}
-            </span>
-            <span className=" d-flex align-items-center gap-1">
-              <i class="ri-timer-flash-line"></i> {speed}
-            </span>
-          </div>
+        </Col>
 
-          <button className=" w-50 car__item-btn car__btn-rent">
-            <Link to={`/form/${id}`}>Rent</Link>
-          </button>
+        <Col lg="4">
+          <br />
+          {isAvailable ? <Button variant="secondary" style={{ margin: "20px" }} className=" w-25 car__item-btn car__btn-rent " >
+            <Link to={`/form/${id}`}>Book Now</Link>
+          </Button> :
+            <Button variant="secondary" style={{ margin: "20px" }} className=" w-25 car__item-btn car__btn-rent" disabled={true}>
+              <Link to={`/form/${id}`}>Book Now</Link>
+            </Button>
+          }
 
-          <button className=" w-50 car__item-btn car__btn-details">
+
+          <Button variant="light" style={{ margin: "5px" }} className=" w-25 car__item-btn car__btn-details">
             <Link to={`/cars/${id}`}>Details</Link>
-          </button>
-        </div>
-      </div>
-    </Col>
+          </Button>
+        </Col>
+
+      </Row>
+    </div>
   );
- 
+
 };
 
 export default CarItem;
